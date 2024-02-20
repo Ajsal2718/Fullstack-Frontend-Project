@@ -1,0 +1,309 @@
+/* external css: flickity.css */
+
+* { 
+    box-sizing: border-box; 
+    /* background-color: #F5F5F7; */
+}
+body { 
+    font-family: sans-serif; 
+    margin: 0%;
+    padding: 0%;   
+    background-color: #F5F5F7;
+}
+/*********** product-list design *********/
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    align-items: stretch;
+    gap: 3rem;
+}
+.product-img:hover{
+    transform: scale(1.3);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.product-text li{
+    list-style: none;
+}
+.product-text a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: black;
+
+}
+.product-text a:hover{
+    text-decoration: underline;
+    
+}
+.carousel {
+    margin-top: -4rem;
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+
+.carousel-cell {
+  width: 32.6%;
+  height: 450px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(68, 54, 54, 0.5);
+  counter-increment: carousel-cell;
+  background-size: cover;
+  background-size: 25rem;
+  background-repeat: no-repeat;
+  padding:1.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.carousel-cell:hover{
+    width: 32.5%; 
+     height:450px;
+    
+     transform: scale(5.025);
+    box-shadow: 5px 5px 5px rgba(52, 7, 7, 0.2);
+     animation: popBackground 5s ease-in
+
+}
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  /* color: white; */
+}
+
+
+.scnd-carousel{
+    width: 32.6%;
+    height: 410px;
+    margin-right: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(68, 54, 54, 0.5);
+    margin-bottom: 10px;
+    /* counter-increment: carousel-cell; */
+    background-size: cover;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    padding:1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.scnd-carousel:hover{
+    width: 32.5%; 
+     height:410px;
+    
+     transform: scale(5.025);
+    box-shadow: 5px 5px 5px rgba(52, 7, 7, 0.2);
+     animation: popBackground 5s ease-in
+
+}
+.scnd-carousel:before{
+    display: block;
+    text-align: center;
+    /* content: counter(carousel-cell); */
+    line-height: 200px;
+    font-size: 80px;
+    /* color: white; */
+}
+
+
+.third-carousel{
+    width: 32.6%;
+    height: 300px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(68, 54, 54, 0.2);
+    /* counter-increment: carousel-cell; */
+    background-size: cover;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    padding:1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.third-carousel:hover{
+    width: 32.5%; 
+     height:300px;
+    
+     transform: scale(5.025);
+    box-shadow: 5px 5px 5px rgba(52, 7, 7, 0.2);
+     animation: popBackground 5s ease-in
+
+}
+.third-carousel:before{
+    display: block;
+    text-align: center;
+    /* content: counter(carousel-cell); */
+    line-height: 200px;
+    font-size: 80px;
+    /* color: white; */
+}
+
+.four-carousel{
+    width: 32.6%;
+    height: 500px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(68, 54, 54, 0.2);
+    /* counter-increment: carousel-cell; */
+    background-size: cover;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    padding:1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.four-carousel:hover{
+    width: 32.5%; 
+     height:500px;
+    
+     transform: scale(5.025);
+    box-shadow: 5px 5px 5px rgba(52, 7, 7, 0.2);
+     animation: popBackground 5s ease-in
+
+}
+.four-carousel:before{
+    display: block;
+    text-align: center;
+    /* content: counter(carousel-cell); */
+    line-height: 200px;
+    font-size: 80px;
+    /* color: white; */
+    cursor: none;
+}
+
+.five-carousel{
+    width: 32.6%;
+    height: 500px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(68, 54, 54, 0.1);
+    /* counter-increment: carousel-cell; */
+    background-size: cover;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    padding:1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    animation: popBackground 0.1s ease-in
+    
+}
+.five-carousel:hover{
+    width: 32.5%; 
+     height:500px;
+     /* transform: scale(5.025); */
+    box-shadow: 5px 5px 5px rgba(52, 7, 7, 0.2);
+     /* animation: popBackground 5s ease-in */
+
+}
+.five-carousel:before{
+    display: block;
+    text-align: center;
+    /* content: counter(carousel-cell); */
+    line-height: 200px;
+    font-size: 80px;
+    /* color: white; */
+}
+@media (max-width: 860px) {/* mobile view */
+   .products{
+       flex-wrap: wrap;
+       gap: 2.2rem;
+   }
+   .texts{
+       width: 100%;
+   }
+}
+
+.product{
+    height: 39.3rem;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s ease;
+}
+.imgBx{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+.icon{
+    color: #fff;
+    font-size: 7.5rem;
+    line-height: 1;
+    margin-bottom: -15rem;
+}
+.iconsvg{
+    max-width: 100%;
+    height: auto;
+}
+.overlay{
+    background-color: rgba(0,0,0,.4);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+}
+.text{
+    padding: 2rem;
+    z-index: 2;
+}
+.title{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    font-size: 3.5rem;
+}
+.subtitle{
+    font-size: 2rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+    }
+@media (min-width: 980px) {
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .column{
+        text-align: center;
+        width: calc((100% / 3) - 4rem);
+        &--1{
+            float: left;
+        }
+        &--2{
+            float: right;
+        }
+    }
+    .image{
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+    .text{
+        width: 30%;
+        border-left: 1px solid #ececec;
+        padding-left: 2rem;
+        font-size: 1.25em;
+        }
+}
+
+
