@@ -14,9 +14,10 @@ import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './login/login/login.component';
 import { StoreComponent } from './store/store/store.component';
 import { MacComponent } from './mac/mac/mac.component';
+import { IpadComponent } from './ipad/ipad/ipad.component';
 
 @NgModule({
-  declarations: [AppComponent, SignUpComponent, NavbarComponent, FooterComponent, HomeComponent, LoginComponent, StoreComponent, StoreComponent, MacComponent],
+  declarations: [AppComponent, SignUpComponent, NavbarComponent, FooterComponent, HomeComponent, LoginComponent, StoreComponent, StoreComponent, MacComponent, IpadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

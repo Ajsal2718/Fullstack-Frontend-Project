@@ -52,7 +52,7 @@ body {
   margin-bottom: 10px;
   border-radius: 15px;
   box-shadow: 5px 5px 5px rgba(68, 54, 54, 0.5);
-  counter-increment: carousel-cell;
+  /* counter-increment: carousel-cell; */
   background-size: cover;
   background-size: 25rem;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@ body {
 .carousel-cell:before {
   display: block;
   text-align: center;
-  /* content: counter(carousel-cell); */
+  content: '';
   line-height: 200px;
   font-size: 80px;
   /* color: white; */

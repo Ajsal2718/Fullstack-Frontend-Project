@@ -1,11 +1,11 @@
 <app-navbar></app-navbar>
 <!------------- Main Part ------------>
-<div >
+<div>
     <!-----------  Apple Product ------------>
     <div class="products">
         <div class="product-text">
           <img class="product-img" style="height:4rem;width: 4rem; margin-left: 2.5rem;" src="../../../assets/mac-product-2.svg" alt="">
-          <li style="text-align: center; margin-left:2rem;"><a href="" style="color: black;">MacBook Air</a></li>
+          <li style="text-align: center; margin-left:2rem;"><a href="">MacBook Air</a></li>
         </div>
           <div class="product-text">
             <img class="product-img" style="height:4rem;width:4rem;" src="../../../assets/mac-product-1.svg" alt="">
@@ -68,8 +68,63 @@
     </div>
 
     <!--------------- Card Section ------------------->
-    <div class="card-product"></div>
-    <div class="heading">
-      <h1 style="padding-top:8rem;padding-left: 5rem; font-size: 3.2rem; color: black;">Get to know Mac.</h1>
+    <div class="product-carousel">
+      <div class="heading">
+        <h1 class="p-[80px] text-6xl font-medium">Get to know Mac.</h1>
+      </div>
+        <div class="carousel" data-flickity='{ "wrapAround": true }'>
+          <div class="carousel-cell" style="background-image: url('../../../assets/mac-carousel-2.jpg');"></div>
+          <div class="carousel-cell" style="background-image: url('../../../assets/mac-carousel-3.jpg');"></div>
+          <div class="carousel-cell" style="background-image: url('../../../assets/mac-carousel-4.jpg');"></div>
+          <div class="carousel-cell" style="background-image: url('../../../assets/mac-carousel-5.jpg');"></div>
+          <div class="carousel-cell" style="background-image: url('../../../assets/mac-carousel-6.jpg');background-size: 350px;"></div>
+          <div class="carousel-cell" style="background-image: url('../../../assets/mac-carousel-7.jpg');"></div>
+          <div class="carousel-cell" style="background-image: url('../../../assets/mac-carousel-1.jpg');color: white; font-weight: 600;"></div>
+        </div>
     </div>
-</div>
+
+    <!------------- last products ----------->
+    <div class="heading">
+      <h1 class="p-[70px] text-6xl font-medium">Explore the line-up.</h1>
+    </div>
+    <div class="products" style="padding-top: 6rem; display: flex;justify-content: space-evenly;">
+      <div class="product-text">
+        <a style="cursor: pointer;"><img class="image" style="height:10rem;width: 22rem;" src="../../../assets/scnd-mac1.png" alt=""></a>
+        <h2 class="text-center mt-[1rem]"><a href="" style="color: black;font-size: 1.5rem;font-weight: bold;">MacBook Air 13″</a></h2>
+        <h2 class="text-center"><a href="" style="color: black;font-size: 1rem;">M1 chip</a></h2>
+        <h2 class="text-center py-3"><a href="" style="color: black;font-size: 1rem;font-weight: 400;">The most affordable Mac laptop to get <br><span style="margin-top: -15rem;">things done on the go.</span></a></h2>
+        <h2 class="text-center"><a href="" style="color: black;font-size: 1rem;font-weight: 600;">From ₹99900.00*</a></h2>
+      </div>
+        <div class="product-text">
+          <a style="cursor: pointer;"><img class="image" style="height:10rem;width:22rem;" src="../../../assets/scnd-mac2.png" alt=""></a>
+          <h2 class="text-center mt-[1rem]"><a href="" style="color: black;font-size: 1.5rem;font-weight: bold;">MacBook Air 13″ and 15″</a></h2>
+          <h2 class="text-center"><a href="" style="color: black;font-size: 1rem;">M2 chip</a></h2>
+          <h2 class="text-center py-3"><a href="" style="color: black;font-size: 1rem;font-weight: 400;">Strikingly thin and fast so you can work,<br><span style="margin-top: -15rem;"> play or create anywhere.</span></a></h2>
+          <h2 class="text-center"><a href="" style="color: black;font-size: 1rem;font-weight: 500;">From ₹114900.00*</a></h2>
+        </div>
+        <div class="product-text">
+          <a href="" style="cursor: pointer;"><img class="image" style="height:10rem;width:22rem;" src="../../../assets/scnd-mac-3.png" alt=""></a>
+          <h2 class="text-center mt-[1rem]"><a href="" style="color: black;font-size: 1.5rem;font-weight: bold;">MacBook Pro 14″ and 16″</a></h2>
+          <h2 class="text-center"><a href="" style="color: black;font-size: 1rem;">M3, M3 Pro or M3 Max chip</a></h2>
+          <h2 class="text-center py-3"><a href="" style="color: black;font-size: 1rem;font-weight: 400;">The most advanced Mac laptops for<br><span style="margin-top: -15rem;"> demanding workflows.</span></a></h2>
+          <h2 class="text-center"><a href="" style="color: black;font-size: 1rem;font-weight: 500;">From ₹169900.00*</a></h2>
+        </div>
+    </div>
+    <hr class="w[10px] my-[6rem] w-[70rem] mx-[5rem]">
+
+    <!--  Product 1 -->
+    <div class="product-carousel">
+      <div class="heading">
+        <h1 style="padding: 5rem; color:black;font-size: 3rem;">Why Apple is the best<br>place to buy Mac.</h1>
+      </div>
+        <div class="carousel" data-flickity='{ "wrapAround": true }'>
+          <!-- <div class="carousel-cell" style="background-image: url('../../../assets/product-iphone.jpg');"></div> -->
+          <div class="third-carousel"><img style="width: 50px;" src="../../../assets/apple-icon.png" alt=""> <br><span style="font-size: 1.8rem; color: white;background-color: #1D1D1F;font-weight: 500;color: #F68F5F;background-color: white ;">Customise your Mac.</span></div>
+          <div class="third-carousel"><img style="width: 60px;" src="../../../assets/smile-icon.png" alt=""><br><span style="font-size: 1.5rem; color: black;background-color: white;font-weight: 600;">Make them yours.</span><br><span style="background-color: white;font-weight: 600; font-size: 1.5rem; color: #AC39FF;">Engrave a mix of emoji, names and numbers for <br> free.</span></div>
+          <div class="third-carousel"><img style="width: 50px;" src="../../../assets/noun-atm-card-5916582.png" alt=""><br><span style="font-size: 1.6rem; color: #68CC45;background-color:white;font-weight: 700;">Flexible ways to pay. <br></span><span style="font-size: 1.6rem; color: black;background-color:white;font-weight: 700;">Plus instant savings§§ <br>and No Cost EMI.§</span></div>
+          <div class="third-carousel" style="background-color: #F8F7F5; font-size: 1.7rem;color: black;font-weight: 600;"><img style="width: 70px;height: 70px;" src="../../../assets/noun-van-2423521.png" alt=""><br><span style="background-color: #F8F7F5; font-size: 1.7rem;color: #68CC45;font-weight: 600;">Enjoy free delivery, or <br> easy pickup </span>from an <br> Apple Store.</div>
+          <div class="third-carousel" style="color: gray; font-weight: 600;"><img style="width:50px;" src="../../../assets/computer-internet-network-icon.png" alt=""><br><br><span style="font-size: 1.2rem;color: black;font-weight: 700;padding-bottom:10rem;">Exchange your smartphone, get ₹15000.00 – ₹62300.00 in credit towards a new one.*</span></div>
+        </div>
+    </div>
+</div> <br><br>
+<app-footer></app-footer>
