@@ -15,9 +15,11 @@ import { LoginComponent } from './login/login/login.component';
 import { StoreComponent } from './store/store/store.component';
 import { MacComponent } from './mac/mac/mac.component';
 import { IpadComponent } from './ipad/ipad/ipad.component';
+import { IphoneComponent } from './iphone/iphone/iphone.component';
+import { SupportComponent } from './support/support/support.component';
 
 @NgModule({
-  declarations: [AppComponent, SignUpComponent, NavbarComponent, FooterComponent, HomeComponent, LoginComponent, StoreComponent, StoreComponent, MacComponent, IpadComponent],
+  declarations: [AppComponent, SignUpComponent, NavbarComponent, FooterComponent, HomeComponent, LoginComponent, StoreComponent, StoreComponent, MacComponent, IpadComponent, IphoneComponent, SupportComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

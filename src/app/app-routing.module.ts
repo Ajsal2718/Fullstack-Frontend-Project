@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login/login.component';
 import { StoreComponent } from './store/store/store.component';
 import { MacComponent } from './mac/mac/mac.component';
 import { IpadComponent } from './ipad/ipad/ipad.component';
+import { IphoneComponent } from './iphone/iphone/iphone.component';
+import { SupportComponent } from './support/support/support.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path:'store',component:StoreComponent},
   {path:'mac',component:MacComponent},
   {path:'ipad',component:IpadComponent},
+  {path:'iphone',component:IphoneComponent},
+  {path:'support',component:SupportComponent},
   {path:'signUp', component: SignUpComponent},
   {path:'login',component:LoginComponent}
 ];
