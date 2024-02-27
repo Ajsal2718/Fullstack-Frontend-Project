@@ -1,17 +1,30 @@
-   <div class="md:flex md:items-center md:justify-center bg-zinc-900 sm:flex sm:items-center w-100">
-      <div class=" ">
-        <ul class="text-neutral-300 flex gap-[7rem] justify-center text-xs font-semibold bg-zinc-900 p-[13px]">
-          <li><a routerLink="/home" ><i class="fa-brands fa-apple" style="font-size:18px;"></i></a></li>
+<div class="md:flex md:items-center md:justify-center bg-zinc-900 sm:flex sm:items-center w-100">
+  <div>
+      <ul class="text-neutral-300 flex gap-[7rem] justify-center text-xs font-semibold bg-zinc-900 p-[13px]">
+          <li><a routerLink="/home"><i class="fa-brands fa-apple" style="font-size:18px;"></i></a></li>
           <li><a routerLink="/store">Store</a></li>
           <li><a routerLink="/mac">Mac</a></li>
           <li><a routerLink="/ipad">iPad</a></li>
           <li><a routerLink="/iphone">iPhone</a></li>
           <!-- <li><a routerLink="/">Watch</a></li>
-          <li>AirPord</li>
+          <li>AirPods</li>
           <li>TV & Home</li> -->
           <li><a routerLink="/support">Support</a></li>
-          <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-          <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
-        </ul>
+          <li><a routerLink="/signup"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><a style="cursor: pointer;" (click)="toggleBagMenu()"><i class="fa-solid fa-bag-shopping"></i></a></li>
+      </ul>
+      <div *ngIf="BagMenu" class="bag-menu">
+          <!-- Your bag menu content goes here -->
+          <h1 class="text-white text-2xl py-[2rem]">Your Bag is empty.</h1>
+          <ul class="text-white">
+            <li class="font-medium">My Profile</li>
+            <li><i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a href="">Orders</a></li>
+            <li><i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a href="">Your Saves</a></li>
+            <li><a routerLink="/signup" *ngIf="!onremove">SignUp</a></li>
+            <li><a routerLink="/login" *ngIf="!logout">Login</a></li>
+            <li><a routerLink="/login" *ngIf="logout">{{out}}</a></li>
+
+          </ul>
       </div>
-   </div>
+  </div>
+</div>
