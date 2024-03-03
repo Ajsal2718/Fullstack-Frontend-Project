@@ -12,11 +12,11 @@
 
                             <form [formGroup]="forms" (ngSubmit)="onclick()" class="mx-1 mx-md-4">
                                 <div class="form-outline form-white mb-2">
-                                    <label class="form-label" for="typeEmailX">username</label>
-                                    <input type="text" id="typeEmailX" class="form-control form-control-lg" formControlName="username" [ngClass]="{'is-invalid':submit && f.username.errors}">
-                                    <div *ngIf="submit && f.username.errors" class=" invalid-feedback">
-                                        <div *ngIf="f.username.errors.required">Email is Required</div>
-                                        <div *ngIf="f.username.errors.username">Invalid Email</div>
+                                    <label class="form-label" for="typeEmailX">Email</label>
+                                    <input type="text" id="typeEmailX" class="form-control form-control-lg" formControlName="email" [ngClass]="{'is-invalid':submit && f.email.errors}">
+                                    <div *ngIf="submit && f.email.errors" class=" invalid-feedback">
+                                        <div *ngIf="f.email.errors.required">Email is Required</div>
+                                        <div *ngIf="f.email.errors.email">Invalid Email</div>
                                     </div>
                                 </div>
 

@@ -16,8 +16,8 @@ export class SignUpComponent implements OnInit{
   constructor(private fb:FormBuilder, private srvc: UserloginService,private route: Router){ }
   ngOnInit(){
     this.forms = this.fb.group({
-      firstname: ['',Validators.required],
-      Email:['',[Validators.required,Validators.email]],
+      username: ['',Validators.required],
+      email:['',[Validators.required,Validators.email]],
       password:['',Validators.required]
      });
 
@@ -25,14 +25,22 @@ export class SignUpComponent implements OnInit{
    get f() { 
     return this.forms.controls; 
   }
-
-    onclick() {
+  onclick(){
     this.submit = true;
-    // console.log(this.forms);
-    this.srvc.user.push(this.forms.value);
-    // this.srvc.signUp();
-    this.route.navigate(['login']);
-    // this.forms.reset();
-   }
+    this.srvc.signUp(this.forms.value).subscribe((res) => {
+    console.log(this.forms.value);
+      
+      if(res){
+        this.route.navigate(['login'])
+        console.log(res);
+        
+      }
+    },(err) => {
+      alert('Already use  the email id or Password is incorrect');
+      console.log(err);
+      // this.submit=false;
+    }
+    )
+  }
 }
 

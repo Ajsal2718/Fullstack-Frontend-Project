@@ -17,6 +17,7 @@ import { SupportComponent } from './support/support/support.component';
 import { BagComponent } from './bag/bag/bag.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home/home.component';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { HomeComponent } from './home/home/home.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     SharedModule,
+    CoreModule,
     MatModule,
     ToastrModule.forRoot({
       timeOut: 2000,

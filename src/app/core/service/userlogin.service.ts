@@ -2,6 +2,8 @@ import { Injectable,OnInit,inject } from '@angular/core';
 import { SignupModel } from '../models/signup-model';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +16,8 @@ export class UserloginService {
   remove: boolean = false;
   issignupcart: boolean = false;
 
+
+  http:HttpClient = inject(HttpClient)
   constructor(private route: Router) {
     const localdata = localStorage.getItem('signupUsers');
     if (localdata != null) {
@@ -22,40 +26,16 @@ export class UserloginService {
   }
 
   // SignUp Section Functions
-  signUp() {
-    this.remove = true
-    localStorage.setItem('signupUsers',JSON.stringify(this.user));
-    alert('SignUp Successfully');
-    this.route.navigate(['login']);
-    if(this.signinValues === this.signinValues){
-    }
+  signUp(signValue:{username:string,email:string,password:string,phone:string}):Observable<object>{
+    console.log(signValue);
+    
+    return this.http.post(`http://localhost:1827/api/signup`,signValue)
   }
 
   // Login Section Functions
-  login(value:{username:string,password:string}) {
-    this.remove = false;
-    console.log(this.signupValues);
-    
-    const findperson = this.user.filter((x) => {
-      return x.firstname === value.username && x.password === value.password;
-    })
-    
-    if(findperson.length == 0 || value.username === null || value.password === null){
-      alert('Your Not Signup')
-      this.issignupcart = false;
-    }
-    else{
-      this.route.navigate(['home']);
-      this.issignupcart = true;
-    }
-    console.log(this.signupValues); 
+  login(value:{email:string,password:string}):Observable<object>{
+    console.log(value);
+    return this.http.post(`http://localhost:1827/api/login`, value)
   }
   
-  // signUp(formValue:NgForm,filr:File){
-  //   const formData = new FormData();
-  //   formData.append('name',formValue.value.name);
-  //   formData.append('email',formValue.value.email);
-  //   formData.append('password',formValue.value.password);
-  //   // return this.http.post()
-  // }
 } 
