@@ -10,7 +10,7 @@
           <li>AirPods</li>
           <li>TV & Home</li> -->
           <li><a routerLink="/support">Support</a></li>
-          <li><a routerLink="/signup"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <!-- <li><a routerLink="/signup"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
           <li><a style="cursor: pointer;" (click)="toggleBagMenu()"><i class="fa-solid fa-bag-shopping"></i></a></li>
       </ul>
       <div *ngIf="BagMenu" class="bag-menu">
@@ -20,9 +20,9 @@
             <li class="font-medium">My Profile</li>
             <li><i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a href="">Orders</a></li>
             <li><i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a href="">Your Saves</a></li>
-            <li><a routerLink="/signup" *ngIf="!onremove">SignUp</a></li>
-            <li><a routerLink="/login" *ngIf="!logout">Login</a></li>
-            <li><a routerLink="/login" *ngIf="logout">{{out}}</a></li>
+            <li><i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a routerLink="/signup" *ngIf="!onremove">SignUp</a></li>
+            <li><i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a routerLink="/login" *ngIf="!logout">Login</a></li>
+            <!-- <li><a routerLink="/login" *ngIf="logout">{{out}}</a></li> -->
 
           </ul>
       </div>

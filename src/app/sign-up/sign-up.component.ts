@@ -18,7 +18,8 @@ export class SignUpComponent implements OnInit{
     this.forms = this.fb.group({
       username: ['',Validators.required],
       email:['',[Validators.required,Validators.email]],
-      password:['',Validators.required]
+      password:['',Validators.required],
+      phone:['',Validators.required]
      });
 
    }  
@@ -38,7 +39,6 @@ export class SignUpComponent implements OnInit{
     },(err) => {
       alert('Already use  the email id or Password is incorrect');
       console.log(err);
-      // this.submit=false;
     }
     )
   }
