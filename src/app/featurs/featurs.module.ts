@@ -6,6 +6,8 @@ import { FormsModule } from "@angular/forms";
 import { MatModule } from "../mat-module/mat.module";
 import { ViewProductComponent } from './view-product/view-product.component';
 import { SharedModule } from "../shared/shared.module";
+import { IphoneProductComponent } from './iphone-product/iphone-product.component';
+import { IpadProductComponent } from './ipad-product/ipad-product.component';
 
 
 
@@ -13,6 +15,8 @@ import { SharedModule } from "../shared/shared.module";
     declarations: [
         MacProductsComponent,
         ViewProductComponent,
+        IphoneProductComponent,
+        IpadProductComponent,
     ],
     exports: [
         MacProductsComponent,

@@ -12,6 +12,8 @@ import { BagComponent } from './bag/bag/bag.component';
 import { OtpComponent } from './otp/otp/otp.component';
 import { MacProductsComponent } from './featurs/mac-products/mac-products.component';
 import { ViewProductComponent } from './featurs/view-product/view-product.component';
+import { IphoneProductComponent } from './featurs/iphone-product/iphone-product.component';
+import { IpadProductComponent } from './featurs/ipad-product/ipad-product.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:"product/:id",component:ViewProductComponent},
   {path:'mac-product',component:MacProductsComponent},
+  {path:'iphone-product',component:IphoneProductComponent},
+  {path:'ipad-product',component:IpadProductComponent}
 ];
 
 @NgModule({

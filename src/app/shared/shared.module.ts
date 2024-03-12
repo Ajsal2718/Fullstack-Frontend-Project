@@ -27,7 +27,8 @@ import { CardComponent } from './card-product/card/card.component';
     exports:[
         NavbarComponent,
         FooterComponent,
-        AdminNavbarComponent
+        AdminNavbarComponent,
+        CardComponent
 
     ],
 })

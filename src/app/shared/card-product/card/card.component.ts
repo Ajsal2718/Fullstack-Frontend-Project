@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MacProductInterface } from 'src/app/core/models/productInterface';
+import { ProductInterface } from 'src/app/core/models/productInterface';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +7,9 @@ import { MacProductInterface } from 'src/app/core/models/productInterface';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input() products : MacProductInterface
+  @Input() products : ProductInterface[]
 
   removeProducts(){
-    
+
   }
 }

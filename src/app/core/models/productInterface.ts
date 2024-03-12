@@ -1,8 +1,8 @@
-export interface MacProductResponseInterface {
+export interface ProductResponseInterface {
   message: string;
-  productData: [MacProductInterface];
+  productData: [ProductInterface];
 }
-export interface MacProductInterface {
+export interface ProductInterface {
   _id: string;
   title: string;
   description: string;
