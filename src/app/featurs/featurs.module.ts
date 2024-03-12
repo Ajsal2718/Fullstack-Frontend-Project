@@ -12,10 +12,10 @@ import { SharedModule } from "../shared/shared.module";
 @NgModule({
     declarations: [
         MacProductsComponent,
-        ViewProductComponent
+        ViewProductComponent,
     ],
     exports: [
-        MacProductsComponent
+        MacProductsComponent,
     ],
     imports: [
         CommonModule,

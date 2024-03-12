@@ -8,7 +8,7 @@ import { UserloginService } from 'src/app/core/service/userlogin.service';
 })
 export class HomeComponent implements OnInit{
   srvc:UserloginService = inject(UserloginService);
-  logbtn:boolean = this.srvc.isLogged;
+  // logbtn:boolean = this.srvc.isLogged;
 
   ngOnInit(): void {
     

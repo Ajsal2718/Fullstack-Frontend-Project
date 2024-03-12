@@ -9,20 +9,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class UserloginService {
-  signinValues: SignupModel[] = [];
-  signupValues: SignupModel[] = [];
-  user: SignupModel[] = [];
-  remove: boolean = false;
-  issignupcart: boolean = false;
-  isLogged:boolean = false;
 
   http: HttpClient = inject(HttpClient);
+  isLoggedIn: boolean = false;
 
   constructor(private route: Router) {
-    const localdata = localStorage.getItem('signupUsers');
-    if (localdata != null) {
-      this.user = JSON.parse(localdata);
-    }
   }
 
   // OTP Send to Email Section Functions
@@ -49,6 +40,14 @@ export class UserloginService {
   // Login Section Functions
   login(value: { email: string; password: string }): Observable<object> {
     console.log(value);
-    return this.http.post(`http://localhost:1827/api/login`, value);
+    return this.http.post(`http://localhost:1827/api/login`, value,{withCredentials: true,});
+  }
+
+  setLoggedIn() {
+    this.isLoggedIn = true;
+  }
+
+  isLoggedin() {
+    return this.isLoggedIn;
   }
 }

@@ -6,7 +6,7 @@ import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
 import { MatModule } from "../mat-module/mat.module";
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
-import { CardProductComponent } from './card-products/card-product/card-product.component';
+import { CardComponent } from './card-product/card/card.component';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { CardProductComponent } from './card-products/card-product/card-product.
         NavbarComponent,
         FooterComponent,
         AdminNavbarComponent,
-        CardProductComponent,
+        CardComponent,
+
 
     ],
     imports:[

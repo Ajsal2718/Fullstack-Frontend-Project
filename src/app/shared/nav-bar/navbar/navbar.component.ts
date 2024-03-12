@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { UserloginService } from 'src/app/core/service/userlogin.service';
 
 @Component({
@@ -7,21 +7,16 @@ import { UserloginService } from 'src/app/core/service/userlogin.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  @Input() logot: boolean = false;
   BagMenu: boolean = false;
-  logout: boolean = false;
-  out: 'Logout';
-  onremove: boolean = false;
-
-  constructor(private serv: UserloginService) {}
-  ngOnInit(): void {
-    this.onremove = this.serv.issignupcart;
-    this.logout = this.serv.issignupcart;
-    console.log(this.logot);
-    
-  }
+  // isLoggedIn: boolean = false;
+  // srvc: UserloginService = inject(UserloginService);
+  constructor(public srvc: UserloginService) {}
+  ngOnInit(): void {}
 
   toggleBagMenu() {
     this.BagMenu = !this.BagMenu;
+  }
+  logout() {
+    this.srvc.setLoggedIn(); // Call setLoggedIn method from the service
   }
 }

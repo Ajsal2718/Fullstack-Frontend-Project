@@ -18,10 +18,14 @@
           <li>AirPods</li>
           <li>TV & Home</li> -->
       <li><a routerLink="/support">Support</a></li>
-      <a routerLink="/signup">SignUp &nbsp;<i class="fa-solid fa-user"></i></a>
-      <a routerLink="/login"
-        >Login &nbsp;<i class="fa-solid fa-right-to-bracket"></i
-      ></a>
+    <div *ngIf="!srvc.isLoggedin()">
+      <a  routerLink="/signup">SignUp &nbsp;<i class="fa-solid fa-user"></i></a>
+      <a style="padding-left: 5rem;" routerLink="/login">Login &nbsp;<i class="fa-solid fa-right-to-bracket"></i></a>
+    </div>
+    <div *ngIf="srvc.isLoggedin()">
+      <button (click)="logout()">Logout</button>
+    </div>
+    
       <!-- <li><a routerLink="/signup"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
       <li>
         <a style="cursor: pointer" (click)="toggleBagMenu()"

@@ -30,7 +30,7 @@ export class LoginComponent {
       
       if(res){
         this.route.navigate(['home']);
-        this.serve.isLogged = true;
+        // this.serve.isLogged = true;
         console.log(res);
         
       }
