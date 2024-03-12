@@ -1,5 +1,5 @@
 export class SignupModel {
-    firstname:string;
+    username:string;
     Email:string;
     password:string;
 }

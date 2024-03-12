@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="main" style="display: flex; flex: 1">
+  <section style="background-color: #eee">
+    <div class="container py-5">
+      <h1 class="text-center mb-4">PRODUCT LIST</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-6 col-xl-4 mb-4">
+          <div class="card border rounded-3 shadow-sm" style="max-width: 300px">
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <div class="bg-image hover-zoom">
+                  <img
+                    [routerLink]="'/product/' + products._id"
+                    [src]="products.Image"
+                    style="height: 170px"
+                    class="w-100"
+                    alt="productimage"
+                  />
+                  <div class="hover-overlay">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(253, 253, 253, 0.15)"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align: center">
+                <!-- <h5>{{i.}}</h5> -->
+                <h5 class="text-center">{{ products.title }}</h5>
+                <h5>{{ products.category }}</h5>
+                <h5>{{ products.description }}</h5>
+              </div>
+              <div class="text-center">
+                <h4>{{ products.price | currency : "INR" }}</h4>
+                <span class="text-danger"
+                  ><s>{{ products.qty }}</s></span
+                >
+                <p class="text-success">Free shipping</p>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button
+                  (click)="removeProducts(products._id)"
+                  mat-raised-button
+                  color="warn"
+                >
+                  view
+                </button>
+                <button
+                  class="ms-2"
+                  mat-flat-button
+                  [routerLink]="'/edit-product/' + products._id"
+                  mat-raised-button
+                >
+                  Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-footer></app-footer>

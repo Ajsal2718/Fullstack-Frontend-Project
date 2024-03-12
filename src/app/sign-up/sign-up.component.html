@@ -1,22 +1,40 @@
-<section class="vh-100" style="background-color: #eee;">
+<section class="vh-100" style="background-color: #eee">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
+        <div class="card text-black" style="border-radius: 25px">
           <div class="card-body p-md-5">
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                  Sign up
+                </p>
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-
-                <form [formGroup]="forms" (ngSubmit)="onclick()" class="mx-1 mx-md-4" >
+                <form
+                  [formGroup]="forms"
+                  (ngSubmit)="onclick()"
+                  class="mx-1 mx-md-4"
+                >
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label>Your Name</label>
-                      <input type="text" id="form3Example1c" class="form-control" formControlName="username" [ngClass]="{'is-invalid':submit&&f.username.errors}">
-                      <div *ngIf="submit && f.username.errors" class="invalid-feedback">
-                          <div *ngIf="f.username.errors.required">First Name is Required</div>
+                      <input
+                        type="text"
+                        id="form3Example1c"
+                        class="form-control"
+                        formControlName="username"
+                        [ngClass]="{
+                          'is-invalid': submit && f.username.errors
+                        }"
+                      />
+                      <div
+                        *ngIf="submit && f.username.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="f.username.errors.required">
+                          First Name is Required
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -24,11 +42,26 @@
                   <div class="d-flex flex-row align-items-center mb-1">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example3c">Your Email</label>
-                      <input type="email" id="form3Example3c" class="form-control" formControlName="email" [ngClass]="{'is-invalid':submit&&f.username.errors}">
-                      <div *ngIf="submit && f.username.errors" class="invalid-feedback">
-                          <div *ngIf="f.username.errors.required">Email is Required</div>
-                          <div *ngIf="f.username.errors.email">Invalid Email</div>
+                      <label class="form-label" for="form3Example3c"
+                        >Your Email</label
+                      >
+                      <input
+                        type="email"
+                        id="form3Example3c"
+                        class="form-control"
+                        formControlName="email"
+                        [ngClass]="{
+                          'is-invalid': submit && f.username.errors
+                        }"
+                      />
+                      <div
+                        *ngIf="submit && f.username.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="f.username.errors.required">
+                          Email is Required
+                        </div>
+                        <div *ngIf="f.errors.email">Invalid Email</div>
                       </div>
                     </div>
                   </div>
@@ -36,37 +69,114 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example4c">Password</label>
-                      <input type="password" id="form3Example4c" class="form-control" formControlName="password" [ngClass]="{'is-invalid':submit&&f.username.errors}">
-                      <div *ngIf="submit && f.username.errors" class="invalid-feedback">
-                          <div *ngIf="f.password.errors">Invalid Password</div>
-                      </div>
+                      <label class="form-label" for="form3Example4c"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        id="form3Example4c"
+                        class="form-control"
+                        formControlName="password"
+                        [ngClass]="{
+                          'is-invalid': submit && f.username.errors
+                        }"
+                      />
+                      <div
+                        *ngIf="submit && f.username.errors"
+                        class="invalid-feedback"
+                      >
+                      <div *ngIf="f.password.errors">Invalid Password</div>
                     </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example4c">Phone</label>
-                      <input type="number" id="form3Example5c" class="form-control" formControlName="phone" [ngClass]="{'is-invalid':submit&&f.username.errors}">
-                      <div *ngIf="submit && f.username.errors" class="invalid-feedback">
-                          <div *ngIf="f.phone.errors">Invalid Phone number</div>
-                      </div>
                     </div>
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-5 mb-lg-1">
-                    <button type="submit" class="btn btn-warning btn-lg" [disabled]="!forms.valid">Register</button>
+                    <button
+                      type="submit"
+                      class="btn btn-warning btn-lg bg-warning">
+                      Register
+                    </button>
                   </div>
                   <!-- <a href="" routerLink="/login">Click Login</a> -->
                 </form>
-
               </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                  class="img-fluid" alt="Sample image">
+              <div
+                class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  class="img-fluid"
+                  alt="Sample image"
+                />
               </div>
+              <!-- OTP-Validation -->
+              <section *ngIf="OtpValidationPage">
+                <div class="main">
+                  <div class="main-heading mt-4">
+                    <img
+                      style="width: 100%"
+                      src="../../../../assets/auth/8n91YnfPq0s (1).png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="main-content mx-1"
+                    style="
+                      text-align: center;
+                      width: 240px;
+                      font-size: 15px;
+                      font-weight: 500;
+                    "
+                  >
+                    <h6>Just one more step</h6>
+                  </div>
+                  <!-- <p style="font-size: 17px">
+                    Enter the 6-digit code we sent to: {{ phone }}
+                  </p> -->
+                  <div class="form" style="text-align: center">
+                    <form #dobForm="ngForm" #otpForm="ngForm">
+                      <input
+                        maxlength="6"
+                        class="otp-Inp"
+                        type="otp"
+                        placeholder="######"
+                        name="otp"
+                        required
+                        ngModel
+                      />
+                    </form>
+                  </div>
+                  <div
+                    class="fb-btn my-3 mb-3 d-flex flex-column align-items-center"
+                  >
+                    <button
+                      style="width: 290px"
+                      (click)="otpValidation()"
+                      class="btn btn-primary p-1 my-2 d-flex align-items-center justify-content-center"
+                    >
+                      <!-- <mat-spinner *ngIf="loader" color="light" diameter="20" mode="indeterminate"
+                          strokeWidth="3"></mat-spinner> -->
+                      Confirm
+                    </button>
+                  </div>
+                  <!-- <div class="my-2">
+                    <button class="number-btn" (click)="changeNumber()">
+                      Change Number
+                    </button>
+                    <span>&nbsp;|&nbsp;</span>
+                    <button class="number-btn">Request New Code</button>
+                  </div> -->
+                </div>
+                <div class="signup">
+                  <button
+                    (click)="login()"
+                    style="border: none; background-color: white"
+                  >
+                    <span style="color: black"> Have an account?</span
+                    ><span style="color: blue">Log in</span>
+                  </button>
+                </div>
+              </section>
             </div>
           </div>
         </div>

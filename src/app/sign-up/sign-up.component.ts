@@ -12,14 +12,15 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent implements OnInit{
   forms: any;
-  submit: boolean;
+  submit: boolean = false;
+  OtpValidationPage:boolean = false;
   constructor(private fb:FormBuilder, private srvc: UserloginService,private route: Router){ }
   ngOnInit(){
     this.forms = this.fb.group({
       username: ['',Validators.required],
       email:['',[Validators.required,Validators.email]],
       password:['',Validators.required],
-      phone:['',Validators.required]
+      // phone:['',Validators.required]
      });
 
    }  
@@ -29,18 +30,25 @@ export class SignUpComponent implements OnInit{
   onclick(){
     this.submit = true;
     this.srvc.signUp(this.forms.value).subscribe((res) => {
-    console.log(this.forms.value);
+      console.log(this.forms.value);
       
       if(res){
-        this.route.navigate(['login'])
+        this.route.navigate(['otp'])
         console.log(res);
         
       }
+      this.OtpValidationPage = true
     },(err) => {
-      alert('Already use  the email id or Password is incorrect');
+      // alert('Already use  the email id or Password is incorrect');
       console.log(err);
     }
     )
+  }
+  otpValidation(){
+    
+  }
+  login(){
+
   }
 }
 

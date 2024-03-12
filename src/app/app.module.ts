@@ -18,7 +18,8 @@ import { BagComponent } from './bag/bag/bag.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home/home.component';
 import { CoreModule } from './core/core.module';
-
+import { OtpComponent } from './otp/otp/otp.component';
+import { FeatursModule } from './featurs/featurs.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CoreModule } from './core/core.module';
     IphoneComponent,
     SupportComponent,
     BagComponent,
+    OtpComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,8 @@ import { CoreModule } from './core/core.module';
     SharedModule,
     CoreModule,
     MatModule,
+    FeatursModule,
+
     ToastrModule.forRoot({
       timeOut: 2000,
     }),

@@ -1,0 +1,93 @@
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-5 mt-1">
+      <div class="bg-white p-3 rounded-3 shadow-sm border">
+        <form [formGroup]="forms" (ngSubmit)="onclick()">
+          <div>
+            <p class="text-center text-success" style="font-size: 5.5rem">
+              <i class="fa-solid fa-envelope-circle-check"></i>
+            </p>
+            <p class="text-center text-center h5">Please check your email</p>
+            <p class="text-muted text-center">We've sent a code your email</p>
+            <div class="row pt-4 pb-2">
+              <div class="col-3">
+                <input
+                  class="otp-letter-input"
+                  type="text"
+                  formControlName="otp1"
+                  [ngClass]="{
+                    'is-invalid': submit && f.otp1.errors
+                  }"
+                />
+                <div
+                  *ngIf="submit && f.otp1.errors"
+                  class="invalid-feedback"
+                ></div>
+              </div>
+
+              <div class="col-3">
+                <input
+                  class="otp-letter-input"
+                  type="text"
+                  formControlName="otp2"
+                  [ngClass]="{
+                    'is-invalid': submit && f.otp2.errors
+                  }"
+                />
+                <div
+                  *ngIf="submit && f.otp2.errors"
+                  class="invalid-feedback"
+                ></div>
+              </div>
+
+              <div class="col-3">
+                <input
+                  class="otp-letter-input"
+                  type="text"
+                  formControlName="otp3"
+                  [ngClass]="{
+                    'is-invalid': submit && f.otp3.errors
+                  }"
+                />
+                <div
+                  *ngIf="submit && f.otp3.errors"
+                  class="invalid-feedback"
+                ></div>
+              </div>
+
+              <div class="col-3">
+                <input
+                  class="otp-letter-input"
+                  type="text"
+                  formControlName="otp4"
+                  [ngClass]="{
+                    'is-invalid': submit && f.otp3.errors
+                  }"
+                />
+                <div
+                  *ngIf="submit && f.otp3.errors"
+                  class="invalid-feedback"
+                >
+              </div>
+              </div>
+            </div>
+            <p class="text-muted text-center">
+              Didn't get the code?
+              <a  class="text-success">Click to resend.</a>
+            </p>
+
+            <div class="row pt-5">
+              <div class="col-6">
+                <button class="btn btn-outline-secondary w-100" >Cancel</button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-success w-100" >Verify</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

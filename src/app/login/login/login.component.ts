@@ -29,7 +29,8 @@ export class LoginComponent {
     console.log(this.forms.value);
       
       if(res){
-        this.route.navigate(['home'])
+        this.route.navigate(['home']);
+        this.serve.isLogged = true;
         console.log(res);
         
       }
