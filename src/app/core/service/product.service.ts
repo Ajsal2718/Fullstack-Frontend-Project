@@ -14,5 +14,8 @@ export class ProductService {
   getAllProduct():Observable<object> {
     return this.http.get(`http://localhost:1827/api/getproduct`,{withCredentials: true})
   }
+  getProductsById(id:any):Observable<object>{
+    return  this.http.get(`http://localhost:1827/api/getproductId/${id}`,{withCredentials:true});
+  }
   
 }

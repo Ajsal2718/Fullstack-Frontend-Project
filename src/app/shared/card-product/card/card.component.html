@@ -40,6 +40,7 @@
                 <button
                   (click)="removeProducts()"
                   mat-raised-button
+                  [routerLink]="'/product/' + product._id"
                   color="warn"
                 >
                   view
@@ -47,7 +48,7 @@
                 <button
                   class="ms-2"
                   mat-flat-button
-                  [routerLink]="'/edit-product/' + product._id"
+                  [routerLink]="'/product/' + product._id"
                   mat-raised-button
                 >
                   Cart

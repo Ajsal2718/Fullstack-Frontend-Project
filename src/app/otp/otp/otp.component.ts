@@ -43,6 +43,7 @@ export class OtpComponent implements OnInit {
     this.srvc.otpVerification(otp).subscribe((res:{message:string,success:boolean})=>{
       if (res.success) {
         this.route.navigate(['login'])
+        alert('OTP Verified Successfully!')
       }else{
         alert('You are not loggedin')
       }

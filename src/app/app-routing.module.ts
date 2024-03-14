@@ -14,6 +14,8 @@ import { MacProductsComponent } from './featurs/mac-products/mac-products.compon
 import { ViewProductComponent } from './featurs/view-product/view-product.component';
 import { IphoneProductComponent } from './featurs/iphone-product/iphone-product.component';
 import { IpadProductComponent } from './featurs/ipad-product/ipad-product.component';
+import { WatchProductComponent } from './featurs/watch-product/watch-product.component';
+import { AirpodProductComponent } from './featurs/airpod-product/airpod-product.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,7 +31,9 @@ const routes: Routes = [
   {path:"product/:id",component:ViewProductComponent},
   {path:'mac-product',component:MacProductsComponent},
   {path:'iphone-product',component:IphoneProductComponent},
-  {path:'ipad-product',component:IpadProductComponent}
+  {path:'ipad-product',component:IpadProductComponent},
+  {path:'watch-product',component:WatchProductComponent},
+  {path:'airpod',component:AirpodProductComponent},
 ];
 
 @NgModule({

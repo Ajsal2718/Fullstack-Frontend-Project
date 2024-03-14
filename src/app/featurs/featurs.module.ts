@@ -8,6 +8,8 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { SharedModule } from "../shared/shared.module";
 import { IphoneProductComponent } from './iphone-product/iphone-product.component';
 import { IpadProductComponent } from './ipad-product/ipad-product.component';
+import { WatchProductComponent } from './watch-product/watch-product.component';
+import { AirpodProductComponent } from './airpod-product/airpod-product.component';
 
 
 
@@ -17,6 +19,8 @@ import { IpadProductComponent } from './ipad-product/ipad-product.component';
         ViewProductComponent,
         IphoneProductComponent,
         IpadProductComponent,
+        WatchProductComponent,
+        AirpodProductComponent,
     ],
     exports: [
         MacProductsComponent,

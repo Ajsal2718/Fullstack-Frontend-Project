@@ -35,7 +35,7 @@ export class SignUpComponent implements OnInit{
       if(res){
         this.route.navigate(['otp'])
         console.log(res);
-        
+        alert('Registration Successful Please check your mail for OTP');
       }
       this.OtpValidationPage = true
     },(err) => {

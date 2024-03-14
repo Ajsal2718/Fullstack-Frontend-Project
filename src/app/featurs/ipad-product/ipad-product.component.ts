@@ -17,9 +17,10 @@ export class IpadProductComponent implements OnInit {
     this.productsrvc
       .getAllProduct()
       .subscribe((res: ProductResponseInterface) => {
-        this.allProducts = res.productData.filter((x) => {
-          return  x.category === 'iPad';
-        })
+        this.allProducts = res.productData.filter((x) => {return  x.category === 'iPad';})
+      },
+      (err) => {
+        console.log(err);
       });
   }
 }

@@ -32,7 +32,7 @@ export class LoginComponent {
         this.route.navigate(['home']);
         // this.serve.isLogged = true;
         console.log(res);
-        
+        alert('Login Successfully');
       }
     },(err) => {
       alert('Username or Password is incorrect');
