@@ -10,6 +10,7 @@ import { IphoneProductComponent } from './iphone-product/iphone-product.componen
 import { IpadProductComponent } from './ipad-product/ipad-product.component';
 import { WatchProductComponent } from './watch-product/watch-product.component';
 import { AirpodProductComponent } from './airpod-product/airpod-product.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 
 
@@ -21,6 +22,7 @@ import { AirpodProductComponent } from './airpod-product/airpod-product.componen
         IpadProductComponent,
         WatchProductComponent,
         AirpodProductComponent,
+        CartPageComponent,
     ],
     exports: [
         MacProductsComponent,

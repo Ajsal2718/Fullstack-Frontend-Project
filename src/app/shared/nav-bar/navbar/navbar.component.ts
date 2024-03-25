@@ -8,15 +8,23 @@ import { UserloginService } from 'src/app/core/service/userlogin.service';
 })
 export class NavbarComponent implements OnInit {
   BagMenu: boolean = false;
-  // isLoggedIn: boolean = false;
-  // srvc: UserloginService = inject(UserloginService);
+  isLoggedIn: boolean = false;
+  isLogoutBtn : boolean = false;
   constructor(public srvc: UserloginService) {}
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    const token : string = localStorage.getItem('token');
+     if (token){
+      this.isLoggedIn;
+       this.isLogoutBtn = true;
+     } else {
+      this.isLoggedIn = true;
+      this.isLogoutBtn = false;
+     }
+  }
   toggleBagMenu() {
     this.BagMenu = !this.BagMenu;
   }
   logout() {
-    this.srvc.setLoggedIn(); // Call setLoggedIn method from the service
+    localStorage.clear();
   }
 }

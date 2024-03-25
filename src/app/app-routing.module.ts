@@ -16,6 +16,8 @@ import { IphoneProductComponent } from './featurs/iphone-product/iphone-product.
 import { IpadProductComponent } from './featurs/ipad-product/ipad-product.component';
 import { WatchProductComponent } from './featurs/watch-product/watch-product.component';
 import { AirpodProductComponent } from './featurs/airpod-product/airpod-product.component';
+import { CartPageComponent } from './featurs/cart-page/cart-page.component';
+import { authGuard } from './core/guards/auth-guard.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -28,12 +30,13 @@ const routes: Routes = [
   {path:'otp',component:OtpComponent},
   {path:'signup', component: SignUpComponent},
   {path:'login',component:LoginComponent},
-  {path:"product/:id",component:ViewProductComponent},
+  {path:"product/:id",component:ViewProductComponent,canActivate:[]} ,
   {path:'mac-product',component:MacProductsComponent},
   {path:'iphone-product',component:IphoneProductComponent},
   {path:'ipad-product',component:IpadProductComponent},
   {path:'watch-product',component:WatchProductComponent},
   {path:'airpod',component:AirpodProductComponent},
+  {path:'cart',component:CartPageComponent}
 ];
 
 @NgModule({

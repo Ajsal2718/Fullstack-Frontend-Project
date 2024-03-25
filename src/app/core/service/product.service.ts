@@ -12,10 +12,12 @@ export class ProductService {
   constructor() { }
 
   getAllProduct():Observable<object> {
-    return this.http.get(`http://localhost:1827/api/getproduct`,{withCredentials: true})
+    return this.http.get(`http://localhost:1827/api/product`,{withCredentials: true})
   }
-  getProductsById(id:any):Observable<object>{
-    return  this.http.get(`http://localhost:1827/api/getproductId/${id}`,{withCredentials:true});
+  getProductsById(id:string):Observable<object>{
+    return  this.http.get(`http://localhost:1827/api/productId/${id}`,{withCredentials:true});
   }
-  
+  addtoCart(id:string):Observable<object>{
+    return this.http.post(`http://localhost:1827/api/${id}/cart`,{withCredentials: true} );
+  }
 }

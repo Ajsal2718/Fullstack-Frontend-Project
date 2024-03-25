@@ -18,12 +18,12 @@
           <li>AirPods</li>
           <li>TV & Home</li> -->
       <li><a routerLink="/support">Support</a></li>
-    <div *ngIf="!srvc.isLoggedin()">
+    <div *ngIf="isLoggedIn">
       <a  routerLink="/signup">SignUp &nbsp;<i class="fa-solid fa-user"></i></a>
       <a style="padding-left: 5rem;" routerLink="/login">Login &nbsp;<i class="fa-solid fa-right-to-bracket"></i></a>
     </div>
-    <div *ngIf="srvc.isLoggedin()">
-      <button (click)="logout()">Logout</button>
+    <div *ngIf="isLogoutBtn">
+      <button (click)="logout()" routerLink="/login">Logout</button>
     </div>
     
       <!-- <li><a routerLink="/signup"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
@@ -39,6 +39,11 @@
       <ul class="text-white">
         <li class="font-medium">My Profile</li>
         <li>
+          <i class="fa-solid fa-user"></i>&nbsp;&nbsp;<a href=""
+            >Profile</a
+          >
+        </li>
+        <li>
           <a routerLink=""
             ><i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;Cart</a
           >
@@ -49,12 +54,7 @@
           >
         </li>
         <li>
-          <i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a href=""
-            >Your Saves</a
-          >
-        </li>
-        <li>
-          <i class="fa-thin fa-bookmark"></i>&nbsp;&nbsp;<a href=""
+          <i class="fa-solid fa-cube"></i>&nbsp;&nbsp;<a href=""
             >Your Orders</a
           >
         </li>

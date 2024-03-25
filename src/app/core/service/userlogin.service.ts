@@ -12,6 +12,7 @@ export class UserloginService {
 
   http: HttpClient = inject(HttpClient);
   isLoggedIn: boolean = false;
+  issignupcart : boolean = false
 
   constructor(private route: Router) {
   }

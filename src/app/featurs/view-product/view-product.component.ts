@@ -15,17 +15,25 @@ export class ViewProductComponent implements OnInit {
   productdeteils: ProductInterface[] = [];
   _id: any;
 
-  constructor(private productsrvc: ProductService,private Actvroute: ActivatedRoute) {}
+  constructor(
+    private productsrvc: ProductService,
+    private Actvroute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    // let routeparams = this.Actvroute.snapshot.paramMap.get('id');
-    // this._id = parseInt(routeparams);
-    // console.log(routeparams);
+    let routeparams = this.Actvroute.snapshot.paramMap.get('id');
+    this._id = parseInt(routeparams);
+    console.log(routeparams);
 
-    this.productsrvc.getProductsById('id').subscribe((res: ProductResponseInterface) => {
-        this.productdeteils = res.productData.filter((x) => x._id == this._id) ;
-        console.log(res.productData);
-      });
+    this.productsrvc.getProductsById(routeparams).subscribe(
+      (res: ProductInterface) => {
+        this.productdeteils.push(res);
+        // console.log(res.productData);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 
   toCart() {}

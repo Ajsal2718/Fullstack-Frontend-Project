@@ -25,12 +25,13 @@ export class LoginComponent {
 
   onclick(){
     this.submit = true;
-    this.serve.login(this.forms.value).subscribe((res) => {
+    this.serve.login(this.forms.value).subscribe((res:{success:string,message:string,accessToken:string,userId:string}) => {
     console.log(this.forms.value);
       
-      if(res){
+      if(res.success){
+        localStorage.setItem('token',res.accessToken);
+        localStorage.setItem('userId',res.userId)
         this.route.navigate(['home']);
-        // this.serve.isLogged = true;
         console.log(res);
         alert('Login Successfully');
       }
